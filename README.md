@@ -1,5 +1,7 @@
 # Diet Calendar
 
+A cross-platform (status pending) diet accountability program.
+
 ### Eventual Structure
 
                     Calorie Calendar
