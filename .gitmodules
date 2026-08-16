@@ -1,0 +1,9 @@
+[submodule "diet-calendar-iOS"]
+	path = diet-calendar-iOS
+	url = https://github.com/LowComDenom/diet-calendar-iOS
+[submodule "diet-calendar-web"]
+	path = diet-calendar-web
+	url = https://github.com/LowComDenom/diet-calendar-web
+[submodule "diet-calendar-win"]
+	path = diet-calendar-win
+	url = https://github.com/LowComDenom/diet-calendar-win
