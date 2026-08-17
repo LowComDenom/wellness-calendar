@@ -1,6 +1,6 @@
 # Wellness Calendar
 
-A cross-platform (status pending) diet accountability program.
+A cross-platform (status pending) wellness journal to help you stay accountable.
 
 ## Structure
 
@@ -25,7 +25,7 @@ flowchart LR
 - User login
 - Give user feedback based on accomplished health goals
 - Calendar
-- Add/edit/delete notes
+- Add/edit/delete notes (multiple per day)
 - Timeline
 - Search)
 2(2.0 : A.I. Enhanced
