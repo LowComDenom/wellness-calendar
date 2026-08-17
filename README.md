@@ -23,14 +23,14 @@ API + SQL Database)]
 flowchart LR
 1(1.0 : The MVP
 - User login
-- Give user feedback based on accomplished health goals
 - Calendar
 - Add/edit/delete multiple notes per day
+- Give user feedback based on accomplished health goals
 - Timeline
 - Search)
 2(2.0 : A.I. Enhanced
-- Monthly AI summaries
-- Weekly AI summaries)
+- Weekly AI summaries
+- Monthly AI summaries)
 3(3.0 : Feature Expansion
 - Charts
 - Streak tracking
@@ -55,7 +55,8 @@ flowchart TD
 
 ## Note Formatting
 
-#### Meal Note
+### Meal Note
+
 | Type of Note | Date |
 | ------------------ | ----------- |
 | Planned meal time | ... |
@@ -67,19 +68,23 @@ flowchart TD
 | Snacking? | (y/n) |
 | Walked after meal? | (y/n) |
 
-#### Fitness Note
+### Fitness Note
+
 | Type of Note | Date |
 | ------------------ | ----------- |
 | Yoga | (y/n) |
-| Time | t |
+| Time (auto-generated field) | t |
 | Walking, hiking | (y/n) |
 | Distance & Time | (d/t) |
 | Other | ... |
 
 ## Goal Logic Example
+
+*Goal logic should ultimately be based on unit values*
+
 ```mermaid
 flowchart LR
-1(Goal:
+1(User sets a goal:
   Walk after dinner at least 5 days per week)
 2{Result}
 3.1(Goal not accomplished)
@@ -99,5 +104,4 @@ flowchart LR
 
 ## Licensing
 
-Add the proper MPL 2.0 header to source files
-https://www.mozilla.org/en-US/MPL/headers/
+Add the proper MPL 2.0 header to source files: https://www.mozilla.org/en-US/MPL/headers/
