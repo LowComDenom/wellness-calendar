@@ -25,7 +25,7 @@ flowchart LR
 - User login
 - Give user feedback based on accomplished health goals
 - Calendar
-- Add/edit/delete notes (multiple per day)
+- Add/edit/delete multiple notes per day
 - Timeline
 - Search)
 2(2.0 : A.I. Enhanced
@@ -53,7 +53,8 @@ flowchart TD
 1 --> 2 --> 3 --> 4
 ```
 
-## Note Format
+## Note Formatting
+
 #### Meal Note
 | Type of Note | Date |
 | ------------------ | ----------- |
@@ -75,7 +76,28 @@ flowchart TD
 | Distance & Time | (d/t) |
 | Other | ... |
 
+## Goal Logic Example
+```mermaid
+flowchart LR
+1(Goal:
+  Walk after dinner at least 5 days per week)
+2{Result}
+3.1(Goal not accomplished)
+3.2(Goal accomplished)
+4.1(Encourage user to try harder next week)
+4.2(Congratulate user)
+5((Week ends))
+1 ---> 2
+2 ---> 3.1
+2 ---> 3.2
+3.1 ---> 4.1
+3.2 ---> 4.2
+4.1 ---> 5
+4.2 ---> 5
+5 ---> 1
+```
+
 ## Licensing
 
-Remember to add the MPL header to source files
+Add the proper MPL 2.0 header to source files
 https://www.mozilla.org/en-US/MPL/headers/
