@@ -8,11 +8,10 @@ A cross-platform (status pending) wellness journal to help you stay accountable.
 
 ```mermaid
 flowchart TD
-1[(Backend
-API + SQL Database)]
-1 --- 2.1(React Web App)
-1 --- 2.2(iOS App)
-1 --- 2.3(Windows
+1[(SQL Database)] --- 2((Backend API))
+2 --- 3.1(React Web App)
+2 --- 3.2(iOS App)
+2 --- 3.3(Windows
           React Native / WinUI
           App)
 ```
