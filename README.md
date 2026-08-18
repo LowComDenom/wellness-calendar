@@ -57,30 +57,30 @@ flowchart TD
 
 ### Meal Note
 
-| Type of Note | Date |
-| ------------------ | ----------- |
-| Planned meal time | ... |
-| Actual meal time |... |
-| Pre-meal assessment | Hunger level: 0-10, type of hunger, environment |
-| Meal details | food and drink consumed |
-| Post-meal reflections | Fullness level: 0-10, type of hunger, environment |
-| Grain, starch, or sugar? | (y/n) |
-| Snacking? | (y/n) |
-| Walked after meal? | (y/n) |
+| Type of Note             | Date                                              |
+| ------------------------ | ------------------------------------------------- |
+| Planned meal time        | ...                                               |
+| Actual meal time         | ...                                               |
+| Pre-meal assessment      | Hunger level: 0-10, type of hunger, environment   |
+| Meal details             | food and drink consumed                           |
+| Post-meal reflections    | Fullness level: 0-10, type of hunger, environment |
+| Grain, starch, or sugar? | (y/n)                                             |
+| Snacking?                | (y/n)                                             |
+| Walked after meal?       | (y/n)                                             |
 
 ### Fitness Note
 
-| Type of Note | Date |
-| ------------------ | ----------- |
-| Yoga | (y/n) |
-| Time (auto-generated field) | t |
-| Walking, hiking | (y/n) |
-| Distance & Time | (d/t) |
-| Other | ... |
+| Type of Note                | Date  |
+| --------------------------- | ----- |
+| Yoga                        | (y/n) |
+| Time (auto-generated field) | t     |
+| Walking, hiking             | (y/n) |
+| Distance & Time             | (d/t) |
+| Other                       | ...   |
 
 ## Goal Logic Example
 
-*Goal logic should ultimately be based on unit values*
+_Goal logic should ultimately be based on unit values_
 
 ```mermaid
 flowchart LR
