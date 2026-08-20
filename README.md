@@ -16,7 +16,7 @@ flowchart TD
           App)
 ```
 
-## Major Releases Roadmap
+## Major Release Roadmap
 
 ```mermaid
 flowchart LR
