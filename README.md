@@ -36,9 +36,12 @@ flowchart LR
 - Reminder emails
 - Push notifications
 - Nutrition trends)
-4(4.0 : Colonization
+4(4.0 : Native Colonization
 - iOS / Windows Release)
-1 --> 2 --> 3 --> 4
+5(5.0 : Experimentation
+- Experimental backend branch for an Erlang rewrite
+- Experimental frontend branch for a Java rewrite)
+1 --> 2 --> 3 --> 4 --> 5
 ```
 
 ## Technology Roadmap
