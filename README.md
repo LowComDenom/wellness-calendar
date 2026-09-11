@@ -24,23 +24,24 @@ flowchart LR
 - User login
 - Calendar
 - Add/edit/delete multiple notes per day
-- Give user feedback based on accomplished health goals
+- Feedback based on accomplished health goals
+- Streak tracking
 - Timeline
+- Charts
 - Search)
 2(2.0 : A.I. Enhanced
 - Weekly AI summaries
 - Monthly AI summaries)
 3(3.0 : Feature Expansion
-- Charts
-- Streak tracking
+- Theming
 - Reminder emails
 - Push notifications
 - Nutrition trends)
 4(4.0 : Native Colonization
 - iOS / Windows Release)
 5(5.0 : Experimentation
-- Experimental backend branch for an Erlang rewrite
-- Experimental frontend branch for a Java rewrite)
+- Experimental branches for an Erlang rewrite
+- Experimental branches for a Java rewrite)
 1 --> 2 --> 3 --> 4 --> 5
 ```
 
