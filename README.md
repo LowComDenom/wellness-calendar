@@ -14,29 +14,6 @@ flowchart LR
     Backend <--> Native[Native App]
 ```
 
-The 1.0 web frontend is organized around an application shell, screens, shared context, and focused helper functions:
-
-```mermaid
-flowchart TD
-    Entry[main.jsx] --> App[App.jsx: route tree]
-    App --> Shell[Layout and navigation]
-    Shell --> Screens[Feature screens]
-    Screens --> Calendar[Calendar: year, month, day]
-    Calendar --> Notes[Notes: create, preview, detail, forms]
-    Calendar --> Goals[Goals: create, list, detail, weekly summary]
-    Screens --> User[User: login, register, settings, stats]
-    Screens --> Timeline[Timeline and weekly summary]
-    Shell --> SearchUI[Search]
-    AccountContext[Account context] --> Auth[Authentication helpers]
-    UserDataContext[User data context] --> DataHelpers[Note CRUD, search, stats helpers]
-    Shell -. uses .-> AccountContext
-    Shell -. uses .-> UserDataContext
-    Screens -. consume .-> UserDataContext
-    SearchUI -. uses .-> DataHelpers
-    Backend((Backend / storage)) <--> Auth
-    Backend <--> DataHelpers
-```
-
 ## Major Release Features
 
 ```mermaid
@@ -51,31 +28,32 @@ flowchart LR
 - Charts & Stats
 - Search)
 2(2.0 : A.I. Enhanced
-- Weekly LLM summaries
-- Monthly LLM summaries)
+- LLM-assisted Summaries
+- LLM suggestions in menus)
 3(3.0 : QoL Expansion
 - User trends & more LLM integration
 - Theming
 - Reminder emails
 - Push notifications)
-4(4.0 : Experimentation
-- Backend / frontend branches)
-1 --> 2 --> 3 --> 4
+1 --> 2 --> 3
 ```
 
 ## Technology Goals
 
 ```mermaid
 flowchart TD
-1(JavaScript + React Implementation)
-2(TypeScript / Sass rewrite)
-3(Next.js rewrite)
-4(Vue rewrite)
-5(iOS App)
-6(Windows React Native App)
-7(macOS App)
-8(Erlang backend rewrite)
-9(JavaFX frontend rewrite)
-1 --> 2 --> 3 --> 4 --> 5 --> 6 --> 7 --> 8 --> 9
+1(JavaScript
+React,React-Router,Express,SQL
+frontend & backend)
+2(TypeScript / Sass makeover)
+3(Vue frontend)
+4(Next.js makeover)
+5(iOS app)
+6(Windows React Native app)
+7(macOS app)
+8(Erlang backend)
+9(JavaFX app)
+10(.NET app)
+1 --> 2 --> 3 --> 4 --> 5 --> 6 --> 7 --> 8 --> 9 --> 10
 ```
 
