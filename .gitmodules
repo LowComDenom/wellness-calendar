@@ -1,9 +1,0 @@
-[submodule "wellness-calendar-iOS"]
-	path = wellness-calendar-iOS
-	url = https://github.com/LowComDenom/wellness-calendar-iOS
-[submodule "wellness-calendar-win"]
-	path = wellness-calendar-win
-	url = https://github.com/LowComDenom/wellness-calendar-win
-[submodule "wellness-calendar-web"]
-	path = wellness-calendar-web
-	url = https://github.com/LowComDenom/wellness-calendar-web
