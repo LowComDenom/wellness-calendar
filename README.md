@@ -7,11 +7,34 @@ A cross-platform (status pending) wellness journal to help you stay accountable.
 [https://mermaid.ai/open-source/syntax/flowchart.html]: #
 
 ```mermaid
+flowchart LR
+    Database[(Database)] --- Backend((Backend))
+    Backend <--> Web[Web App]
+    Backend <--> Mobile[Mobile App]
+    Backend <--> Native[Native App]
+```
+
+The 1.0 web frontend is organized around an application shell, screens, shared context, and focused helper functions:
+
+```mermaid
 flowchart TD
-1[(Database)] --- 2((Backend))
-2 <---> 3.1(Web App)
-2 <---> 3.2(Mobile App)
-2 <---> 3.3(Native App)
+    Entry[main.jsx] --> App[App.jsx: route tree]
+    App --> Shell[Layout and navigation]
+    Shell --> Screens[Feature screens]
+    Screens --> Calendar[Calendar: year, month, day]
+    Calendar --> Notes[Notes: create, preview, detail, forms]
+    Calendar --> Goals[Goals: create, list, detail, weekly summary]
+    Screens --> User[User: login, register, settings, stats]
+    Screens --> Timeline[Timeline and weekly summary]
+    Shell --> SearchUI[Search]
+    AccountContext[Account context] --> Auth[Authentication helpers]
+    UserDataContext[User data context] --> DataHelpers[Note CRUD, search, stats helpers]
+    Shell -. uses .-> AccountContext
+    Shell -. uses .-> UserDataContext
+    Screens -. consume .-> UserDataContext
+    SearchUI -. uses .-> DataHelpers
+    Backend((Backend / storage)) <--> Auth
+    Backend <--> DataHelpers
 ```
 
 ## Major Release Features
