@@ -1,23 +1,63 @@
+[https://mermaid.ai/open-source/syntax/flowchart.html]:#
+
+# Ideal client test environment
+
+* Chromium / Firefox / Safari
+* React Dev tools
+
+# Hosting options
+
+* Cloudflare
+* Google (Cloud, Firebase)
+* Railway
+* Vercel
+* Wordpress
+
 # Wellness Calendar
 
-A cross-platform (status pending) wellness journal to help you stay accountable.
+A cross-platform (status pending), interactive lifestyle notebook to help you stay accountable.
+
+| Platform | Repo |
+|----------|------|
+| Web  | https://github.com/LowComDenom/wellness-calendar-web.git |
+| iOS     | https://github.com/LowComDenom/wellness-calendar-iOS.git |
+| Windows | https://github.com/LowComDenom/wellness-calendar-win.git |
 
 ## Structure
 
-[https://mermaid.ai/open-source/syntax/flowchart.html]: #
-
 ```mermaid
 flowchart LR
-    Database[(Database)] --- Backend((Backend))
-    Backend <--> Web[Web App]
-    Backend <--> Mobile[Mobile App]
-    Backend <--> Native[Native App]
+
+subgraph Backend
+  DB[(-Database-)]
+  r1{{db query}}
+  API((-API-))
+end
+
+subgraph Client
+  r2{{fetch}}
+  CLI[-App-]
+end
+
+DB <--> r1 <--> API
+API<--> r2 <--> CLI
 ```
 
-## Major Release Features
+## Key Technologies In 1.0
+
+* JavaScript
+* HTML
+* CSS
+* React
+* React Router
+* Express
+* PostgresSQL
+
+## Major Release Roadmap
 
 ```mermaid
 flowchart LR
+
 1(1.0 : The MVP
 - User login
 - Calendar
@@ -27,33 +67,41 @@ flowchart LR
 - Timeline
 - Charts & Stats
 - Search)
-2(2.0 : A.I. Enhanced
+
+2(2.0 : QoL and LLMs
 - LLM-assisted Summaries
-- LLM suggestions in menus)
-3(3.0 : QoL Expansion
+- LLM suggestions in menus
 - User trends & more LLM integration
 - Theming
 - Reminder emails
 - Push notifications)
+
+3(3.0 : Platform Expansion
+- Native apps for major platforms)
+
 1 --> 2 --> 3
 ```
 
-## Technology Goals
+## Technologies to experiment with later
 
-```mermaid
-flowchart TD
-1(JavaScript
-React,React-Router,Express,SQL
-frontend & backend)
-2(TypeScript / Sass makeover)
-3(Vue frontend)
-4(Next.js makeover)
-5(iOS app)
-6(Windows React Native app)
-7(macOS app)
-8(Erlang backend)
-9(JavaFX app)
-10(.NET app)
-1 --> 2 --> 3 --> 4 --> 5 --> 6 --> 7 --> 8 --> 9 --> 10
-```
+### Frameworks
+* .NET
+* Angular
+* Lit
+* NextJS
+* Nuxt
+* SolidJS
+* Svelte
+* SwiftUI
+* tailwindcss
+* Vue 
+* WinUI 3
 
+### Languages
+* C
+* C#
+* CL
+* Elixir
+* Erlang
+* Sass
+* TypeScript

@@ -5,16 +5,19 @@ Users create goals assigned to certain calendar days
 
 | Type of Note             | Date                                              |
 | ------------------------ | ------------------------------------------------- |
+| Meal name                | Breakfast, Brunch, Lunch, Dinner, Snack...        |
 | Planned meal time        | ...                                               |
 | Actual meal time         | ...                                               |
 | Pre-meal assessment      | Hunger level: 0-10, type of hunger, environment   |
 | Meal details             | food and drink consumed                           |
 | Post-meal reflections    | Fullness level: 0-10, type of hunger, environment |
 | Grain, starch, or sugar? | (y/n)                                             |
-| Snacking?                | (y/n)                                             |
-| Walked after meal?       | (y/n)                                             |
+| Snacking?                | (y/n) if yes, prompt creation of a nutrition note |
+| Walked after meal?       | (y/n) if yes, prompt creation of a fitness note   |
 
 ## Fitness Note
+
+Fitness notes will be based on presets created by users.
 
 | Type of Note                         | Date  |
 | -------------------------------------| ----- |
