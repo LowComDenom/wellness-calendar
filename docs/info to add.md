@@ -1,3 +1,7 @@
+html stuff:
+* floating ToC on the side for quick page navigation
+* use js for duplicate elements (nav bar)
+
 # C.R.U.D. Notes
 Users create goals assigned to certain calendar days
 

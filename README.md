@@ -1,9 +1,18 @@
 [https://mermaid.ai/open-source/syntax/flowchart.html]:#
 
+_much of this should be moved to docs, or elsewhere_
+
+# To-do
+
+- [ ] Deploy
+- [ ] Working UI with mock data
+- [ ] Set up a real database
+- [ ] Connect database to UI
+
 # Ideal client test environment
 
 * Chromium / Firefox / Safari
-* React Dev tools
+* React Dev tools extension
 
 # Hosting options
 
@@ -24,8 +33,6 @@ A cross-platform (status pending), simple lifestyle notebook to help you stay ac
 | Windows | https://github.com/LowComDenom/wellness-calendar-win.git |
 
 ## Structure
-
-All complex data mutation is done on the backend, all the client does is send, request, and display simple values.
 
 ```mermaid
 flowchart LR
@@ -87,13 +94,47 @@ end
 subgraph vPX [Platform Expansion Versions]
 direction TB
 
-iOS(3.0 : Native iOS app)
-mac(4.0 : Native macOS app)
-win(5.0 : Native Windows app)
+RN(3.0 : React Native Apps)
+apple(3.0 : SwiftUI app)
+win(3.0 : WinUI 3 app)
 
 end
 
 v1 --> v2 --> vPX
+```
+
+## Versioning Scheme
+
+https://semver.org/
+
+### Representation of implementing the first feature on the web front end, then finding a bug later
+
+``` mermaid
+gitGraph
+   commit id: "initial commit" tag: "0.0"
+   commit id: "1"
+   branch user-login
+   checkout user-login
+   commit id: "A"
+   commit id: "B"
+   commit id: "C"
+   checkout main
+   merge user-login tag: "0.1"
+   commit id: "2"
+   commit id: "3" tag: "0.2"
+   commit id: "4"
+   commit id: "5" tag: "psql cve found"
+   branch psql-cve-fix
+   commit id: "x"
+   checkout main
+   merge psql-cve-fix tag: "0.2a"
+   commit id: "6"
+   commit id: "7" tag: "user login bug found"
+   branch fix-user-login
+   commit id: "a"
+   commit id: "b"
+   checkout main
+   merge fix-user-login tag: "0.2.1"
 ```
 
 ## Technologies to experiment with later
@@ -105,6 +146,7 @@ v1 --> v2 --> vPX
 * Lit
 * NextJS
 * Nuxt
+* React Native
 * SolidJS (most interesting)
 * Svelte
 * SwiftUI
