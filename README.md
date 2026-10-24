@@ -1,5 +1,5 @@
 [https://mermaid.ai/open-source/syntax/flowchart.html]:#
-
+_https://expressjs.com/en/5x/starter/installing/_  
 _much of this should be moved to docs, or elsewhere_
 
 # To-do
@@ -55,10 +55,12 @@ API<--> r2 <--> CLI
 ## Key Technologies In 1.0
 
 * JavaScript
+* TypeScript
 * HTML
 * CSS
 * React
 * React Router
+* tailwindcss
 * Express
 * PostgresSQL
 
@@ -143,6 +145,7 @@ gitGraph
 
 * .NET
 * Angular
+* Effect
 * Lit
 * NextJS
 * Nuxt
@@ -150,17 +153,15 @@ gitGraph
 * SolidJS (most interesting)
 * Svelte
 * SwiftUI
-* tailwindcss
-* Vue 
+* Vue
 * WinUI 3
 
 ### Languages
 
 * C#
-* Elixir (most interesting)
+* Elixir
 * Erlang
 * Sass
-* TypeScript (w/ Effect)
 
 ### Other
 
