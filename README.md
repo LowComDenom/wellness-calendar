@@ -1,36 +1,36 @@
-[https://mermaid.ai/open-source/syntax/flowchart.html]:#
+_https://mermaid.ai/open-source/syntax/flowchart.html_  
 _https://expressjs.com/en/5x/starter/installing/_  
-_much of this should be moved to docs, or elsewhere_
+
+# Wellness Calendar
+
+A cross-platform (status pending), simple lifestyle journal to help you stay accountable.
+
+| Platform | Repo |
+|----------|------|
+| Web     | https://github.com/LowComDenom/wellness-calendar-web.git |
+| iOS     | https://github.com/LowComDenom/wellness-calendar-iOS.git |
+| Windows | https://github.com/LowComDenom/wellness-calendar-win.git |
 
 # To-do
 
-- [ ] Deploy
-- [ ] Working UI with mock data
+- [ ] Deploy web front end scaffold
+- [ ] Complete database schema and queries
+- [ ] Seed local database with mock data
+- [ ] Complete API and routes
 - [ ] Set up a real database
 - [ ] Connect database to UI
-
-# Ideal client test environment
-
-* Chromium / Firefox / Safari
-* React Dev tools extension
 
 # Hosting options
 
 * Cloudflare
-* Google (Cloud, Firebase)
+* Google
 * Railway
-* Vercel
+* Vercel (most likely)
 * Wordpress
 
-# Wellness Calendar
+# Ideal client test environment
 
-A cross-platform (status pending), simple lifestyle notebook to help you stay accountable.
-
-| Platform | Repo |
-|----------|------|
-| Web  | https://github.com/LowComDenom/wellness-calendar-web.git |
-| iOS     | https://github.com/LowComDenom/wellness-calendar-iOS.git |
-| Windows | https://github.com/LowComDenom/wellness-calendar-win.git |
+Chromium w/ React Dev tools extension
 
 ## Structure
 
@@ -52,18 +52,6 @@ DB <--> r1 <--> API
 API<--> r2 <--> CLI
 ```
 
-## Key Technologies In 1.0
-
-* JavaScript
-* TypeScript
-* HTML
-* CSS
-* React
-* React Router
-* tailwindcss
-* Express
-* PostgresSQL
-
 ## Major Release Roadmap
 
 ```mermaid
@@ -75,21 +63,23 @@ direction TB
 f1.1(User login)
 f1.2(Calendar UI)
 f1.3(Add/edit/delete multiple notes per day)
-f1.4(Feedback based on accomplished goals over a period)
-f1.5(Streak tracking)
-f1.6(Timeline)
-f1.7(Charts & Stats)
-f1.8(Search)
-f1.9(Theming)
+f1.4(Stats and Charts)
+f1.5(User feedback derrived from stats)
 
 end
 
 subgraph v2 [2.0 : QoL AI]
 direction TB
 
-f2.1(Reminder emails)
-f2.2(Push notifications)
-f2.3(LLM integrations)
+f2.1(Theming)
+f2.2(Timeline view)
+f2.3(Search)
+f2.4(User-generated note templates)
+f2.5(Pinned notes)
+f2.6(Reminder emails)
+f2.7(Push notifications)
+f2.8(LLM integrations for smarter feedback)
+f2.9(OAuth)
 
 end
 
@@ -138,31 +128,3 @@ gitGraph
    checkout main
    merge fix-user-login tag: "0.2.1"
 ```
-
-## Technologies to experiment with later
-
-### Frameworks
-
-* .NET
-* Angular
-* Effect
-* Lit
-* NextJS
-* Nuxt
-* React Native
-* SolidJS (most interesting)
-* Svelte
-* SwiftUI
-* Vue
-* WinUI 3
-
-### Languages
-
-* C#
-* Elixir
-* Erlang
-* Sass
-
-### Other
-
-* VITE+

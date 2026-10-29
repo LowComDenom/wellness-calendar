@@ -1,14 +1,54 @@
-html stuff:
-* floating ToC on the side for quick page navigation
-* use js for duplicate elements (nav bar)
+# Objects
+
+## User
+
+| Property | Description |
+|----------|------|
+| id       | |
+| username | |
+| password | |
+
+## Note
+
+| Property  | Description |
+|-----------|------|
+| user_id   | |
+| date      | |
+| title     | |
+| note      | a note inside your note |
+| type      | |
+| body      | contains the fields/values as json |
+
+## Goal
+
+| Property       | Description |
+|----------------|------|
+| user_id        | |
+| title          | |
+| duration start | when the goal becomes active |
+| duration end   | when the goal is either completed or not |
+| description    | description of what the goal is |
+| completed      | true/false depending if completed on time |
+
+## Stats
+
+| Property                | Description |
+|-------------------------|------|
+| user_id                 | |
+| total notes             | |
+| total notes of _x_ type | |
+| total goals             | |
+| goals completed         | |
+
 
 # C.R.U.D. Notes
-Users create goals assigned to certain calendar days
+
+Users create notes and goals assigned to chosen calendar days
 
 ## Nutrition Note
 
-| Type of Note             | Date                                              |
-| ------------------------ | ------------------------------------------------- |
+| Type of Note             | Date                                              | Data Type |
+| ------------------------ | ------------------------------------------------- | ----------- |
 | Meal name                | Breakfast, Brunch, Lunch, Dinner, Snack...        |
 | Planned meal time        | ...                                               |
 | Actual meal time         | ...                                               |

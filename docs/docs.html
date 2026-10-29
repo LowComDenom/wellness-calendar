@@ -4,27 +4,70 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="format.css">
+	<script src="reusables.js" defer></script>
 	<title>Documentation</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="docs.html">home</a>
-            </li>
-            <li>
-                <a href="server.html">server</a>
-            </li>
-            <li>
-                <a href="client.html">client</a>
-            </li>
-            <li>
-                <a href="glossary.html">glossary</a>
-            </li>
-        </ul>
-    </nav>
-    <article>
-        <p>landing page</p>
-    </article>
+   <nav-bar></nav-bar>
+   <main>
+       <side-bar></side-bar>
+       <article>
+           <h1 id="top">Wellness Calendar</h1>
+           <p>A cross-platform (status pending), simple lifestyle journal to help you stay accountable.</p>
+           <hr/>
+           <h2>Quick Overview</h2>
+           <h3>Core Features</h3>
+           <p>Users will be able to create a log of their nutrition, fitness, and other activities, as well as goals, via a polished, calendar-based UI by attaching any number of notes to a given day.</p>
+           <p>Statistics will be tallied based on user data to be viewed on a dedicated page. These are also used to provide feedback in other places within the app.</p>
+           <h3>Planned Features</h3>
+           <ul>
+               <li> Theming</li>
+               <li> Timeline view</li>
+               <li> Search</li>
+               <li> User-generated note templates</li>
+               <li> Pinned notes</li>
+               <li> Reminder emails</li>
+               <li> Push notifications</li>
+               <li> LLM integrations</li>
+               <li> OAuth</li>
+           </ul>
+           <h2>Key Technologies for 1.0-2.0</h2>
+           <ul>
+               <li> JavaScript</li>
+               <li> TypeScript</li>
+               <li> HTML</li>
+               <li> CSS</li>
+               <li> React</li>
+               <li> React Router</li>
+               <li> tailwindcss</li>
+               <li> Express</li>
+               <li> PostgresSQL</li>
+           </ul>
+           <h2>Technologies to experiment with later</h2>
+           <h3>Frameworks</h3>
+           <ul>
+               <li> .NET</li>
+               <li> Angular</li>
+               <li> Effect</li>
+               <li> Lit</li>
+               <li> NextJS</li>
+               <li> Nuxt</li>
+               <li> React Native</li>
+               <li> SolidJS</li>
+               <li> Svelte</li>
+               <li> SwiftUI</li>
+               <li> Vue</li>
+               <li> WinUI 3</li>
+           </ul>
+           <h3 id="bottom">Languages</h3>
+           <ul>
+               <li> C#</li>
+               <li> Elixir</li>
+               <li> Erlang</li>
+               <li> Sass</li>
+           </ul>
+       </article>
+   </main>
+   <foot-bar></foot-bar>
 </body>
 </html>
