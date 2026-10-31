@@ -11,9 +11,15 @@ A cross-platform (status pending), simple lifestyle journal to help you stay acc
 | iOS     | https://github.com/LowComDenom/wellness-calendar-iOS.git |
 | Windows | https://github.com/LowComDenom/wellness-calendar-win.git |
 
+Documentation currently lives in the `docs` folder.
+
+# How to run
+
+...
+
 # To-do
 
-- [ ] Deploy web front end scaffold
+- [ ] Complete and deploy the web front end scaffold
 - [ ] Complete database schema and queries
 - [ ] Seed local database with mock data
 - [ ] Complete API and routes
@@ -22,17 +28,19 @@ A cross-platform (status pending), simple lifestyle journal to help you stay acc
 
 # Hosting options
 
+* Render (required by course)
+* Netlify (required by course)
 * Cloudflare
 * Google
 * Railway
-* Vercel (most likely)
+* Vercel (most likely in the future)
 * Wordpress
 
 # Ideal client test environment
 
 Chromium w/ React Dev tools extension
 
-## Structure
+# Structure
 
 ```mermaid
 flowchart LR
@@ -52,48 +60,34 @@ DB <--> r1 <--> API
 API<--> r2 <--> CLI
 ```
 
-## Major Release Roadmap
+# Major Release Roadmap
 
-```mermaid
-flowchart TD
+## 1.0 : The MVP
 
-subgraph v1 [1.0 : The MVP]
-direction TB
+- [ ] Calendar UI
+- [ ] User login
+- [ ] Add/edit/delete multiple notes per day
 
-f1.1(User login)
-f1.2(Calendar UI)
-f1.3(Add/edit/delete multiple notes per day)
-f1.4(Stats and Charts)
-f1.5(User feedback derrived from stats)
+## 2.0 : QoL / AI
 
-end
+- [ ] Timeline view
+- [ ] Stats and Charts
+- [ ] User feedback derrived from stats
+- [ ] Theming
+- [ ] Search
+- [ ] User-generated note templates
+- [ ] Pinned notes
+- [ ] Reminder emails
+- [ ] Push notifications
+- [ ] OAuth
+- [ ] LLM integrations for smarter feedback
+- [ ] Native OS calendar interaction
 
-subgraph v2 [2.0 : QoL AI]
-direction TB
+## Platform Expansion Versions
 
-f2.1(Theming)
-f2.2(Timeline view)
-f2.3(Search)
-f2.4(User-generated note templates)
-f2.5(Pinned notes)
-f2.6(Reminder emails)
-f2.7(Push notifications)
-f2.8(LLM integrations for smarter feedback)
-f2.9(OAuth)
-
-end
-
-subgraph vPX [Platform Expansion Versions]
-direction TB
-
-RN(3.0 : React Native Apps)
-apple(3.0 : SwiftUI app)
-win(3.0 : WinUI 3 app)
-
-end
-
-v1 --> v2 --> vPX
-```
+- [ ] 3.0 : React Native App
+- [ ] 3.0 : SwiftUI app
+- [ ] 3.0 : WinUI 3 app
 
 ## Versioning Scheme
 

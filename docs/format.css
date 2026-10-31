@@ -19,8 +19,8 @@ main {
 article {
     flex-grow: 4;
 
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: 85vh;
+    max-height: 85vh;
     overflow-y: auto;
 
     padding: 0.5rem;
@@ -28,6 +28,10 @@ article {
     color: antiquewhite;
     background-color: mediumslateblue;
     border: 0.2rem inset black;
+}
+
+table, thead, th, tbody, tr, td {
+    border: 0.1rem solid black;
 }
 
 section {

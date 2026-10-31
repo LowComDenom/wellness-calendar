@@ -1,46 +1,3 @@
-# Objects
-
-## User
-
-| Property | Description |
-|----------|------|
-| id       | |
-| username | |
-| password | |
-
-## Note
-
-| Property  | Description |
-|-----------|------|
-| user_id   | |
-| date      | |
-| title     | |
-| note      | a note inside your note |
-| type      | |
-| body      | contains the fields/values as json |
-
-## Goal
-
-| Property       | Description |
-|----------------|------|
-| user_id        | |
-| title          | |
-| duration start | when the goal becomes active |
-| duration end   | when the goal is either completed or not |
-| description    | description of what the goal is |
-| completed      | true/false depending if completed on time |
-
-## Stats
-
-| Property                | Description |
-|-------------------------|------|
-| user_id                 | |
-| total notes             | |
-| total notes of _x_ type | |
-| total goals             | |
-| goals completed         | |
-
-
 # C.R.U.D. Notes
 
 Users create notes and goals assigned to chosen calendar days
@@ -68,7 +25,7 @@ Fitness notes will be based on presets created by users.
 | Exercise type                        | ...   |
 | Other fields generated based on type | ...   |
 
-# C.R.U.D. Goals
+# Goals (not in MVP)
 
 Users set goals and receive feedback based on note content at the end of a period of time. (recurring goals allowed)
 

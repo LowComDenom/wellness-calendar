@@ -4,7 +4,6 @@ function Nav() {
     <a href="docs.html">Home</a>
     <a href="server.html">Server</a>
     <a href="client.html">Client</a>
-    <a href="glossary.html">Glossary</a>
     `
   return _
 }
