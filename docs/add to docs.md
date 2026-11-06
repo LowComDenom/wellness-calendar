@@ -1,3 +1,11 @@
+# health plans
+
+a structured planning document for managing things like fitness and nutrition
+
+it will automatically create recurring goals and keep track of total relevant stats
+
+relevant notes and goals will be attached to them for easy viewing
+
 # C.R.U.D. Notes
 
 Users create notes and goals assigned to chosen calendar days

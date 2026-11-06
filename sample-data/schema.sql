@@ -14,8 +14,8 @@ create table notes (
     date date not null,
     title text,
     description text,
-    type text not null,
-    body json not null
+    note_type text not null,
+    fields json not null
 );
 
 /* Not in MVP
