@@ -6,6 +6,11 @@ it will automatically create recurring goals and keep track of total relevant st
 
 relevant notes and goals will be attached to them for easy viewing
 
+# UX NOTES
+
+* dynamic buttons that appear next to the last button you clicked to give you quick access to other options
+* maybe move the menu bar into the calendar component
+
 # C.R.U.D. Notes
 
 Users create notes and goals assigned to chosen calendar days
