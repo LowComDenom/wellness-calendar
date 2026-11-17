@@ -1,10 +1,14 @@
 import express from 'express'
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('nothing to see here')
+})
+
+app.post('/', (req, res) => {
+  res.send('Got the POST')
 })
 
 app.listen(PORT, () => {
