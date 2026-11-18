@@ -14,8 +14,8 @@ create table notes (
     date date not null,
     title text,
     description text,
-    note_type text not null,
-    fields json not null
+    type text not null,
+    fields json not null check (json_typeof(fields) = 'array')
 );
 
 /* Not in MVP
