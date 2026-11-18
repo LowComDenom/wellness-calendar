@@ -2,6 +2,8 @@ import bcrypt from 'bcryptjs'
 
 import db from '../pg-client'
 
+const SALT = Number(process.env.SALT_LVL)
+
 /*
   To-do:
   - make sure that username and password inputs are validated somewhere down the line
@@ -10,7 +12,7 @@ import db from '../pg-client'
 */
 
 export async function register(username, password) {
-  const hash = bcrypt.hash(password, process.env.SALT_LVL)
+  const hash = await bcrypt.hash(password, SALT)
   const { rows: [user] } = await db.query(
     `
     insert into users (username, password_hash)
@@ -20,3 +22,5 @@ export async function register(username, password) {
     , [username, hash])
   return user
 }
+
+  
