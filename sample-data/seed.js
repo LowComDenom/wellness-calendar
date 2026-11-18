@@ -20,10 +20,8 @@ async function seed() {
       description: `test description ${i + 1}`,
       type: `test type ${i + 1}`,
       fields:
-        [
-        { title: 'test field 1', value: 'test value 1' },
-        { title: 'test field 2', value: 'test value 2' }
-        ]
+        [{ title: 'test field 1', value: 'test value 1' },
+        { title: 'test field 2', value: 'test value 2' }]
     })
   }
 }

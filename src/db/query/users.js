@@ -12,14 +12,14 @@ const SALT = Number(process.env.SALT_LVL)
 */
 
 export async function register(username, password) {
-  const hash = await bcrypt.hash(password, SALT)
+  const password_hash = await bcrypt.hash(password, SALT)
   const { rows: [user] } = await db.query(
     `
     insert into users (username, password_hash)
     values ($1, $2)
     returning *
     `
-    , [username, hash])
+    , [username, password_hash])
   return user
 }
 
