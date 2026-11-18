@@ -23,4 +23,11 @@ export async function register(username, password) {
   return user
 }
 
-  
+export async function login(username, password) {
+  return
+}
+
+export async function getUser(id) {
+  const { rows: [user] } = await db.query(`select * from users where id = $1`, [id])
+  return user
+}
