@@ -26,7 +26,7 @@ router.post('/', requireBody(['date', 'type', 'fields']), async (req, res) => {
 router.param('date', async (req, res, next, date) => {
   const notes = await getNotesByDate(req.user.id, date)
   
-  if (notes.length < 1) return res.status(404).send('No notes at this date.')
+  if (notes.length <= 0) return res.status(404).send([])
 
   if (notes[0].user_id !== req.user.id)
     return res.status(403).send('Authentication error.')

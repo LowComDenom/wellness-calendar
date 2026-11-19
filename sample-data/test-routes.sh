@@ -51,20 +51,28 @@ request 'POST /users/login' 200 \
 TOKEN="$HTTP_BODY"
 AUTH_HEADER="Authorization: Bearer $TOKEN"
 
-request 'GET /notes' 200 \
-  -H "$AUTH_HEADER" "$BASE_URL/notes"
-
-request 'POST /notes' 201 \
+request 'POST /notes (1 of 4)' 201 \
   -X POST "$BASE_URL/notes" \
   -H "$AUTH_HEADER" \
   -H 'Content-Type: application/json' \
   -d "{\"date\":\"$NOTE_DATE\",\"title\":\"curl route test\",\"description\":\"Created by sample-data/test-routes.sh\",\"type\":\"test\",\"fields\":[{\"title\":\"status\",\"value\":\"ok\"}]}"
 NOTE_ID="$(python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])' <<< "$HTTP_BODY")"
 
+for note_number in 2 3 4; do
+  request "POST /notes ($note_number of 4)" 201 \
+    -X POST "$BASE_URL/notes" \
+    -H "$AUTH_HEADER" \
+    -H 'Content-Type: application/json' \
+    -d "{\"date\":\"$NOTE_DATE\",\"title\":\"curl route test $note_number\",\"description\":\"Created by sample-data/test-routes.sh\",\"type\":\"test\",\"fields\":[{\"title\":\"status\",\"value\":\"ok\"}]}"
+done
+
 request "GET /notes/by-date/$NOTE_DATE" 200 \
   -H "$AUTH_HEADER" "$BASE_URL/notes/by-date/$NOTE_DATE"
 
 request "GET /notes/by-id/$NOTE_ID" 200 \
   -H "$AUTH_HEADER" "$BASE_URL/notes/by-id/$NOTE_ID"
+
+request 'GET /notes (all user notes)' 200 \
+  -H "$AUTH_HEADER" "$BASE_URL/notes"
 
 printf '\nAll routes returned their expected status codes.\n'
