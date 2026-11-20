@@ -21,7 +21,7 @@ A simple lifestyle journal to help you stay accountable. This collection of prog
 - [ ] Calendar UI
 - [x] User login
 - [ ] Add/edit/delete multiple notes per day
-- [ ] Visually appealing frontend
+- [ ] Visually appealing UI
 
 ## 2.0 : Better QoL, Better Feedback, More Features
 
