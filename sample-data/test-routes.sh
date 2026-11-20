@@ -75,4 +75,6 @@ request "GET /notes/by-id/$NOTE_ID" 200 \
 request 'GET /notes (all user notes)' 200 \
   -H "$AUTH_HEADER" "$BASE_URL/notes"
 
+printf '\n==username+password: %s' "$USERNAME, $PASSWORD"
+
 printf '\nAll routes returned their expected status codes.\n'

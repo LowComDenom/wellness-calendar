@@ -9,8 +9,8 @@ await seed()
 await db.end()
 console.log('Seed successful.')
 
+// validate db functionality
 async function seed() {
-  // 5 notes for 1 user to start
   const user = await register('test_user', 'test_password')
   for (let i = 0; i < 5; i++){
     await newNote({

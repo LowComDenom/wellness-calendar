@@ -1,6 +1,13 @@
 import { getUser } from '../db/query/users'
 import { verifyToken } from '../utils/jwt'
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ * @returns attaches user to req
+ */
 export default async function getUserFromToken(req, res, next) {
   const auth = req.get('Authorization')
   

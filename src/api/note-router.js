@@ -15,8 +15,6 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', requireBody(['date', 'type', 'fields']), async (req, res) => {
-  // const { date, type, fields } = req.body
-  
   const note = await newNote(req.user.id, req.body)
   
   res.status(201).send(note)

@@ -1,6 +1,3 @@
-_https://mermaid.ai/open-source/syntax/flowchart.html_  
-_https://expressjs.com/en/5x/starter/installing/_  
-
 # Wellness Calendar
 
 A cross-platform simple lifestyle journal to help you stay accountable.
@@ -9,33 +6,20 @@ A cross-platform simple lifestyle journal to help you stay accountable.
 |----------|------|
 | Web     | https://github.com/LowComDenom/wellness-calendar-web.git |
 
+![Screenshot of the calendar page](screens/calendar-wip.png)
+
 # How to run
 
 ...
-
-# Hosting options
-
-* Render (required by course)
-* Netlify (required by course)
-* Cloudflare
-* Google
-* Railway
-* Vercel
-* Wordpress
-* Convex
-* Prisma
-
-# Ideal client test environment
-
-Chromium w/ React Dev tools extension
 
 # Major Release Roadmap
 
 ## 1.0 : The MVP
 
 - [ ] Calendar UI
-- [ ] User login
+- [x] User login
 - [ ] Add/edit/delete multiple notes per day
+- [ ] Visually appealing frontend
 
 ## 2.0 : Better QoL, Better Feedback, More Data
 
@@ -49,6 +33,29 @@ Chromium w/ React Dev tools extension
 - [ ] OAuth
 - [ ] LLM integrations for smarter feedback
 
-## Versioning Scheme
+# Core Deps
 
-https://semver.org/
+## Backend
+
+- bcryptjs
+- express
+- jsonwebtoken
+- pg
+
+## Frontend
+
+- React
+- React Router
+- Vite
+- Tailwindcss
+
+# Architecture
+
+| Folder     | Content          |
+|------------|------------------|
+| src        | main express app |
+| api        | express routes   |
+| db         | postgres client  |
+| db/query   | postgres queries |
+| middleware | mandating user authentication and request body fields |
+| utils      | web token        |

@@ -4,12 +4,12 @@ import db from '../pg-client'
 
 const SALT = Number(process.env.SALT_LVL ?? 10)
 
-/*
-  To-do:
-  - make sure that username and password inputs are validated somewhere down the line
-  - change to `returning id, username` in the future
-  - give feedback to users who attempt to use a duplicate username
-*/
+/**
+ * 
+ * @param {*} username 
+ * @param {*} password 
+ * @returns user
+ */
 export async function register(username, password) {
   const password_hash = await bcrypt.hash(password, SALT)
   
@@ -17,13 +17,19 @@ export async function register(username, password) {
     `
     insert into users (username, password_hash)
     values ($1, $2)
-    returning *
+    returning id, username
     `
     , [username, password_hash])
   
   return user
 }
 
+/**
+ * 
+ * @param {*} username 
+ * @param {*} password 
+ * @returns user
+ */
 export async function login(username, password) {
   const { rows: [user] } = await db.query(`select * from users where username = $1`, [username])
   
@@ -36,6 +42,11 @@ export async function login(username, password) {
   return user
 }
 
+/**
+ * 
+ * @param {*} id 
+ * @returns user
+ */
 export async function getUser(id) {
   const { rows: [user] } = await db.query(`select * from users where id = $1`, [id])
   
