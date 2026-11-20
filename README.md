@@ -1,10 +1,12 @@
 # Wellness Calendar
 
-A cross-platform simple lifestyle journal to help you stay accountable.
+A simple lifestyle journal to help you stay accountable. This collection of programs creates an environment that makes keeping track of your well-being easy.
 
 | Platform | Repo |
 |----------|------|
-| Web     | https://github.com/LowComDenom/wellness-calendar-web.git |
+| Web      | https://github.com/LowComDenom/wellness-calendar-web.git |
+| Appkit   | TBD |
+| WinUI    | TBD |
 
 ![Screenshot of the calendar page](screens/calendar-wip.png)
 
@@ -21,7 +23,7 @@ A cross-platform simple lifestyle journal to help you stay accountable.
 - [ ] Add/edit/delete multiple notes per day
 - [ ] Visually appealing frontend
 
-## 2.0 : Better QoL, Better Feedback, More Data
+## 2.0 : Better QoL, Better Feedback, More Features
 
 - [ ] Timeline view
 - [ ] Stats and Charts
@@ -53,9 +55,9 @@ A cross-platform simple lifestyle journal to help you stay accountable.
 
 | Folder     | Content          |
 |------------|------------------|
-| src        | main express app |
-| api        | express routes   |
-| db         | postgres client  |
-| db/query   | postgres queries |
-| middleware | mandating user authentication and request body fields |
-| utils      | web token        |
+| src        | Main express app |
+| api        | Express routes   |
+| db         | Postgres client  |
+| db/query   | Postgres queries |
+| middleware | Mandating user authentication and request body fields |
+| utils      | Web token management |
